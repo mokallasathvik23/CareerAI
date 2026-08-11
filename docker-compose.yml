@@ -7,7 +7,7 @@ services:
       - "5000:5000"
     environment:
       FLASK_ENV: production
-      DATABASE_URL: sqlite:///talentmatch.db
+      DATABASE_URL: sqlite:///careerai.db
       JWT_SECRET_KEY: dev-secret-key
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-mock}
       GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET:-mock}

@@ -214,7 +214,7 @@ React and Flask communities
 Tailwind CSS for styling system
 
 <div align="center">
-Built with ❤️ for better hiring experiences
+Empowering smarter hiring through AI-driven recruitment solutions.
 
 Report Bug · Request Feature
 
@@ -269,7 +269,12 @@ venv/Lib/site-packages/flask/sansio/app.py
 ## 📦 DEPENDENCIES
 ```
 Frontend Dependencies:
-@auth0/auth0-react framer-motion react react-dom react-router-dom 
+@auth0/auth0-react
+ framer-motion
+ react
+ react-dom
+ react-router-dom
+ 
 ```
 
 ## 🔍 DETECTED FEATURES

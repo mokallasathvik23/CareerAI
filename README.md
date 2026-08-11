@@ -1,319 +1,469 @@
-TalentMatch - AI-Powered Recruitment Platform
-<img width="1366" height="768" alt="2 (2)" src="https://github.com/user-attachments/assets/86cd5f36-d181-4c53-a490-60e86ed017f5" />
-<img width="1366" height="768" alt="3 (2)" src="https://github.com/user-attachments/assets/f23064c6-39cd-4de6-a525-946d558b2e64" />
-<img width="1366" height="768" alt="4 (2)" src="https://github.com/user-attachments/assets/a68c0105-b154-4d44-aa43-790b6fc96683" />
-<img width="1366" height="768" alt="1 (2)" src="https://github.com/user-attachments/assets/122251bb-3d9b-49ba-839c-f70afa82dcc8" />
-
-
-TalentMatch is a modern, AI-powered recruitment platform that intelligently matches candidates to job descriptions using semantic similarity and machine learning.
-
-🚀 Features
-Core Functionality
-AI Job Analysis - Parse and extract key skills from job descriptions
-
-Smart Candidate Matching - Semantic similarity matching using vector embeddings
-
-Candidate Management - Upload and store candidate profiles
-
-Interview Question Generation - AI-powered, context-aware interview questions
-
-Real-time Ranking - Live candidate ranking with similarity scores
-
-Technical Features
-Full-Stack Application - React frontend with Flask backend
-
-Vector Similarity Search - Advanced matching using embeddings
-
-Responsive Design - Mobile-friendly Tailwind CSS interface
-
-RESTful API - Clean API architecture for extensibility
-
-🛠 Tech Stack
-Frontend
-React 18 - Modern React with hooks
-
-React Router - Client-side routing
-
-Tailwind CSS - Utility-first CSS framework
-
-Framer Motion - Smooth animations
-
-Vite - Fast build tool and dev server
-
-Backend
-Flask - Python web framework
-
-Pinecone - Vector database for similarity search
-
-OpenAI Embeddings - Text embedding generation
-
-Python-dotenv - Environment configuration
-
-📦 Installation
-Prerequisites
-Node.js 16+ and npm
-
-Python 3.8+
-
-Pinecone account (optional - fallback to in-memory store)
-
-Backend Setup
-Navigate to backend directory
-
-bash
-cd talentmatch/backend
-Install Python dependencies
-
-bash
-pip install -r requirements.txt
-Set up environment variables
-
-bash
-cp .env.example .env
-Edit .env with your credentials:
-
-env
-PINECONE_API_KEY=your_pinecone_api_key
-PINECONE_ENVIRONMENT=your_environment
-OPENAI_API_KEY=your_openai_api_key
-DEBUG=True
-Start the Flask server
-
-bash
-python -m backend.app
-Server runs on http://localhost:5000
-
-Frontend Setup
-Navigate to project root
-
-bash
-cd talentmatch
-Install dependencies
-
-bash
-npm install
-Start development server
-
-bash
-npm run dev
-Application runs on http://localhost:5173
-
-🎯 Usage
-Basic Workflow
-Access the Application
-
-Open http://localhost:5173 in your browser
-
-Click "Try it now" to access the dashboard
-
-Analyze Job Description
-
-Paste a job description in the text area
-
-Click "Analyze" to extract skills and requirements
-
-Upload Candidates
-
-Drag & drop resume files or paste candidate names
-
-System automatically processes and stores candidates
-
-View Matches
-
-See real-time candidate rankings with similarity scores
-
-Scores range from 0-100% based on semantic match
-
-Generate Questions
-
-Click "Generate" to create interview questions
-
-Questions are tailored to job requirements and candidate skills
-
-API Endpoints
-Jobs
-POST /jobs/analyze - Analyze job description
-
-GET /jobs/ - Get jobs endpoint info
-
-Candidates
-POST /candidates/upload - Upload multiple candidates
-
-POST /candidates/add - Add single candidate
-
-GET /candidates/debug - Debug stored candidates
-
-Questions
-POST /questions/generate - Generate interview questions
-
-POST /questions/submit - Submit and evaluate answers
-
-<img width="509" height="713" alt="Tree" src="https://github.com/user-attachments/assets/44af85b1-1c74-42b5-b16c-945c9a14ea7c" />
-
-
-env
-PINECONE_API_KEY=your_pinecone_key
-PINECONE_ENVIRONMENT=us-east-1
-OPENAI_API_KEY=your_openai_key
-DEBUG=True
-Frontend (vite.config.js)
-
-javascript
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 5173,
-    proxy: {
-      '/api': 'http://localhost:5000'
-    }
-  }
-})
-🚀 Deployment
-Development
-bash
-# Backend
-cd backend && 
-.
-
-# Frontend  
-cd talentmatch && npm run dev
-Production Build
-bash
-# Build frontend
-npm run build
-
-# Serve with nginx or similar
-🤝 Contributing
-Fork the repository
-
-Create a feature branch (git checkout -b feature/amazing-feature)
-
-Commit your changes (git commit -m 'Add amazing feature')
-
-Push to the branch (git push origin feature/amazing-feature)
-
-Open a Pull Request
-
-📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🆘 Support
-For support and questions:
-
-Check the Issues page
-
-Create a new issue with detailed description
-
-🏆 Acknowledgments
-OpenAI for embedding models
-
-Pinecone for vector database infrastructure
-
-React and Flask communities
-
-Tailwind CSS for styling system
+# CareerAI — AI-Powered Recruitment Platform
 
 <div align="center">
-Empowering smarter hiring through AI-driven recruitment solutions.
 
-Report Bug · Request Feature
+**Empowering smarter hiring through AI-driven recruitment solutions.**
+
+CareerAI is a full-stack AI-powered recruitment platform that analyzes job descriptions, processes candidate profiles, performs semantic matching using vector embeddings, ranks candidates based on relevance, and generates context-aware interview questions.
 
 </div>
 
-## 📋 Project Overview
+---
 
+## 🚀 Features
 
-## 🏗️ TECH STACK
-```
-Project: talentmatch
-Frontend: React
-  Build: Vite
-  Language: TypeScript
-  CSS: Tailwind
-  Orchestration: docker-compose
-```
+### 🤖 AI-Powered Recruitment
 
-## 📁 PROJECT STRUCTURE
-```
-.
-./.vscode
-./backend
-./backend/config
-./backend/database
-./backend/models
-./backend/routes
-./backend/src
-./backend/tests
-./backend/utils
-./backups
-./backups/pre-typescript-migration
-./config
-./config/environments
-./config/production
-```
+* **AI Job Analysis** — Analyze job descriptions and identify important skills and requirements.
+* **Smart Candidate Matching** — Match candidates with job descriptions using semantic similarity and vector embeddings.
+* **Candidate Ranking** — Rank candidates based on their relevance to a job.
+* **Interview Question Generation** — Generate context-aware interview questions based on job requirements and candidate profiles.
 
-## 🔑 KEY FILES
-```
-backend/app.py
-dist/index.html
-index.html
-src/App.tsx
-src/index.css
-src/main.jsx
-src/main.tsx
-venv/Lib/site-packages/dotenv/main.py
-venv/Lib/site-packages/flask/app.py
-venv/Lib/site-packages/flask/sansio/app.py
-```
+### 👤 Candidate Management
 
-## 📦 DEPENDENCIES
-```
-Frontend Dependencies:
-@auth0/auth0-react
- framer-motion
- react
- react-dom
- react-router-dom
- 
-```
+* Upload and manage candidate profiles.
+* Add individual candidates.
+* Process candidate information for matching.
+* View candidate matching results.
 
-## 🔍 DETECTED FEATURES
-```
-✅ Auth: backend/production_auth.py
-✅ Auth: backend/routes/auth.py
-✅ Auth: config/production/oauth_config.py
-✅ API: backend/routes/api.py
-✅ API: src/lib/api.ts
-✅ API: src/types/api.ts
-✅ docker-compose ready
+### 🔐 Authentication
+
+* Auth0-based authentication.
+* Protected application routes.
+* Backend authentication and authorization.
+* Secure environment-based configuration.
+
+### ⚡ Full-Stack Architecture
+
+* React + TypeScript frontend.
+* Flask/Python backend.
+* RESTful API architecture.
+* Pinecone vector database.
+* OpenAI embeddings.
+* Responsive Tailwind CSS interface.
+* Docker-based development support.
+
+---
+
+## 🧠 How CareerAI Works
+
+```text
+                    CareerAI
+                       │
+          ┌────────────┴────────────┐
+          ↓                         ↓
+   Job Description              Candidate
+          │                       Profile
+          ↓                         ↓
+     Job Analysis             Candidate Processing
+          │                         │
+          └────────────┬────────────┘
+                       ↓
+                Text Embeddings
+                       ↓
+               Pinecone Vector DB
+                       ↓
+              Semantic Similarity
+                       ↓
+              Candidate Ranking
+                       ↓
+          ┌────────────┴────────────┐
+          ↓                         ↓
+     Match Results          Interview Questions
 ```
 
-## 📊 QUICK STATS
-```
-Files (source):
-2243
+### Semantic Matching
+
+CareerAI uses vector embeddings to compare the meaning of candidate profiles with job requirements rather than relying only on exact keyword matches.
+
+```text
+Job Description
+       ↓
+   Embedding
+       ↓
+Vector Representation
+       ↓
+Semantic Similarity
+       ↑
+Vector Representation
+       ↑
+   Embedding
+       ↑
+Candidate Profile
 ```
 
-## 🚀 GETTING STARTED
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React 18
+* TypeScript
+* Vite
+* React Router
+* Tailwind CSS
+* Framer Motion
+* Auth0 React SDK
+
+### Backend
+
+* Python
+* Flask
+* REST APIs
+* Authentication & Authorization
+
+### AI & Vector Search
+
+* OpenAI Embeddings
+* Pinecone
+* Semantic Similarity Search
+
+### Infrastructure
+
+* Docker
+* Docker Compose
+* Nginx
+* Vercel
+
+---
+
+## 📁 Project Structure
+
+```text
+CareerAI/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── lib/
+│   ├── types/
+│   └── main.tsx
+│
+├── backend/
+│   ├── config/
+│   ├── database/
+│   ├── models/
+│   ├── routes/
+│   ├── src/
+│   ├── tests/
+│   └── utils/
+│
+├── config/
+│   ├── environments/
+│   └── production/
+│
+├── docs/
+├── Dockerfile
+├── docker-compose.yml
+├── nginx.conf
+├── package.json
+├── vite.config.ts
+└── README.md
 ```
-# Install dependencies
+
+---
+
+## 📦 Installation
+
+### Prerequisites
+
+* Node.js 16+
+* npm
+* Python 3.8+
+* OpenAI API key
+* Pinecone account and API key
+* Auth0 configuration
+
+### Clone the repository
+
+```bash
+git clone https://github.com/mokallasathvik23/CareerAI.git
+
+cd CareerAI
+```
+
+### Install frontend dependencies
+
+```bash
 npm install
+```
 
-# Available scripts:
-npm run build
+### Install backend dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configure environment variables
+
+Create a `.env` file based on `.env.example`.
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+PINECONE_API_KEY=your_pinecone_api_key
+PINECONE_ENVIRONMENT=your_pinecone_environment
+DEBUG=True
+```
+
+> Never commit API keys, passwords, JWT secrets, or other sensitive credentials to GitHub.
+
+---
+
+## ▶️ Running the Application
+
+### Start the backend
+
+```bash
+python app.py
+```
+
+The backend runs on:
+
+```text
+http://localhost:5000
+```
+
+### Start the frontend
+
+```bash
 npm run dev
-npm run preview
-npm run type-check
-npm run type-check:watch
+```
 
-# Start with Docker
+The frontend runs on:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🎯 Usage
+
+### 1. Analyze a Job Description
+
+Enter a job description into CareerAI.
+
+The system analyzes the job requirements and identifies relevant skills.
+
+### 2. Add Candidates
+
+Upload candidate profiles or add candidates through the application.
+
+### 3. Match Candidates
+
+CareerAI processes candidate and job information using embeddings and semantic similarity.
+
+### 4. View Candidate Rankings
+
+Candidates are ranked according to their similarity to the selected job.
+
+### 5. Generate Interview Questions
+
+Generate interview questions based on the job requirements and candidate information.
+
+---
+
+## 🔌 API Endpoints
+
+### Jobs
+
+```text
+POST /jobs/analyze
+```
+
+Analyze a job description.
+
+```text
+GET /jobs/
+```
+
+Get job endpoint information.
+
+### Candidates
+
+```text
+POST /candidates/upload
+```
+
+Upload multiple candidates.
+
+```text
+POST /candidates/add
+```
+
+Add an individual candidate.
+
+### Interview Questions
+
+```text
+POST /questions/generate
+```
+
+Generate AI-powered interview questions.
+
+```text
+POST /questions/submit
+```
+
+Submit and evaluate interview answers.
+
+---
+
+## 🐳 Docker
+
+Build the application:
+
+```bash
+docker-compose build
+```
+
+Start the services:
+
+```bash
 docker-compose up
 ```
 
-## 📝 COMMON NEXT STEPS
+Stop the services:
+
+```bash
+docker-compose down
 ```
-1. Check .env.example or .env for configuration
-2. Run npm install / pip install
-3. Start development server
-4. Check README.md for project-specific instructions
+
+---
+
+## 🧪 Development Commands
+
+```bash
+# Start development server
+npm run dev
+
+# Build production application
+npm run build
+
+# Preview production build
+npm run preview
+
+# Type checking
+npm run type-check
+
+# Start Docker services
+docker-compose up
+
+# Stop Docker services
+docker-compose down
 ```
+
+---
+
+## 🔐 Security
+
+CareerAI uses environment variables for sensitive configuration.
+
+The following should never be committed to GitHub:
+
+```text
+.env
+API keys
+OpenAI credentials
+Pinecone credentials
+JWT secrets
+Auth0 secrets
+```
+
+Use `.env.example` to document required configuration without exposing real credentials.
+
+---
+
+## 📸 Screenshots
+
+Add screenshots of your **CareerAI application** here.
+
+Recommended screenshots:
+
+* Landing page
+* Login/authentication
+* CareerAI dashboard
+* Job analysis
+* Candidate upload
+* Candidate ranking
+* Matching results
+* Interview question generation
+
+Example:
+
+```markdown
+![CareerAI Dashboard](screenshots/dashboard.png)
+
+![Job Analysis](screenshots/job-analysis.png)
+
+![Candidate Matching](screenshots/candidate-matching.png)
+```
+
+---
+
+## 🔮 Future Improvements
+
+* Resume PDF parsing
+* Automatic skill extraction from resumes
+* Skill-gap analysis
+* Personalized job recommendations
+* Candidate application tracking
+* Recruiter analytics dashboard
+* Advanced candidate filtering
+* Interview preparation workspace
+* Improved candidate ranking algorithms
+* Automated testing
+* Production cloud deployment
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository.
+2. Create a feature branch.
+
+```bash
+git checkout -b feature/your-feature
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Add your feature"
+```
+
+4. Push the branch.
+
+```bash
+git push origin feature/your-feature
+```
+
+5. Open a Pull Request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+* OpenAI for embedding and AI capabilities.
+* Pinecone for vector search infrastructure.
+* React community.
+* Flask community.
+* Tailwind CSS community.
+
+---
+
+<div align="center">
+
+**Built with AI to connect the right talent with the right opportunities.**
+
+### CareerAI
+
+</div>
